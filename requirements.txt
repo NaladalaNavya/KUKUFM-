@@ -1,0 +1,14 @@
+streamlit
+gtts
+python-dotenv
+tqdm
+google-generativeai
+os
+json
+calendar
+dotenv
+fpdf
+random
+tqdm
+time
+
