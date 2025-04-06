@@ -689,6 +689,19 @@ if st.session_state.logged_in:
         
         st.markdown(f"📝 Script:\n\n{episode_text}")
 
+        # Navigation buttons
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col1:
+            if st.session_state.day > 1:
+                if st.button("⬅ Previous Day"):
+                    st.session_state.day -= 1
+                    st.rerun()
+        with col3:
+            if st.session_state.day < 10:
+                if st.button("Next Day ➡"):
+                    st.session_state.day += 1
+                    st.rerun()
+
         # 🧘 Journal
         with st.expander("✍ Reflection Journal"):
             journal_input = st.text_area("Write today's reflection or insight...")
